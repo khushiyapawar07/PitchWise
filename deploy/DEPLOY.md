@@ -51,11 +51,20 @@ Alternative: use repo-root `render.yaml` Blueprint if your Render account suppor
 
 ## 2. Deploy frontend (Vercel)
 
-1. **Add New Project** → import the same repository.
-2. **Root Directory:** `frontend`
-3. **Framework preset:** Vite
-4. **Build command:** `npm run build`
-5. **Output directory:** `dist`
+**Option A — repo root (recommended if you see `vite: command not found`)**
+
+1. **Add New Project** → import the repository.
+2. Leave **Root Directory** empty (repository root).
+3. Repo root **`vercel.json`** runs install/build inside `frontend/`.
+4. Override in dashboard only if needed:
+   - Install: `npm install --prefix frontend`
+   - Build: `npm run build --prefix frontend`
+   - Output: `frontend/dist`
+
+**Option B — frontend as root**
+
+1. Set **Root Directory** to `frontend`.
+2. Build: `npm run build`, Output: `dist`.
 
 ### Environment variables (Vercel)
 
