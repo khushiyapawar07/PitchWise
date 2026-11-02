@@ -1,0 +1,10 @@
+{
+  "venues": [
+    {
+      "venue_id": "wankhede_mumbai",
+      "venue_name": "Wankhede Stadium",
+      "location": "Mumbai",
+      "aliases": ["Wankhede Stadium", "Wankhede Stadium, Mumbai"]
+    }
+  ]
+}

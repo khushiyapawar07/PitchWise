@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-d11-red: #e4002b;
+  --color-d11-red-hover: #c40025;
+  --color-d11-bg: #0a0a0a;
+  --color-d11-panel: #141414;
+  --color-d11-panel-2: #1c1c1c;
+  --color-d11-border: #2a2a2a;
+  --color-d11-muted: #9a9a9a;
+  --color-d11-green: #1fad53;
+}
+
+body {
+  @apply bg-d11-bg text-white antialiased;
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-md bg-d11-red px-4 py-2 text-sm font-semibold text-white transition hover:bg-d11-red-hover disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply rounded-md border border-d11-border bg-d11-panel-2 px-3 py-1.5 text-sm text-white transition hover:border-d11-red/60;
+  }
+
+  .panel {
+    @apply rounded-lg border border-d11-border bg-d11-panel;
+  }
+
+  .link-muted {
+    @apply text-sm text-d11-muted hover:text-white;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg border border-d11-border bg-d11-panel-2 px-3 py-2 text-white outline-none focus:border-d11-red;
+  }
+
+  .page-title {
+    @apply text-xl font-bold uppercase tracking-wide text-white;
+  }
+
+  .section-title {
+    @apply text-sm font-semibold uppercase tracking-wider text-d11-red;
+  }
+}

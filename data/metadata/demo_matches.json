@@ -1,0 +1,16 @@
+{
+  "featured_match_id": "1426267",
+  "historical_cutoff_date": "2024-04-13",
+  "exclude_from_history_match_ids": ["1426267"],
+  "matches": [
+    {
+      "match_id": "1426267",
+      "team_1": "Chennai Super Kings",
+      "team_2": "Mumbai Indians",
+      "venue_id": "wankhede_mumbai",
+      "match_date": "2024-04-14",
+      "match_format": "T20",
+      "display_title": "Chennai Super Kings vs Mumbai Indians"
+    }
+  ]
+}

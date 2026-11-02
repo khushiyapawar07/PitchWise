@@ -1,0 +1,26 @@
+# Render Blueprint (repo root). Connect repo at https://dashboard.render.com
+services:
+  - type: web
+    name: pitchwise-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.8"
+      - key: DATA_RAW_DIR
+        value: ../data/raw
+      - key: DATA_PROCESSED_DIR
+        value: ../data/processed
+      - key: DATA_METADATA_DIR
+        value: ../data/metadata
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
+      - key: GEMINI_TIMEOUT_MS
+        value: "120000"
+      - key: CORS_ORIGINS
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
